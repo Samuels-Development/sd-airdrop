@@ -198,7 +198,7 @@ RegisterNetEvent('dropCoords:client:setPoly', function(dropCoords)
         heading=335.31,
         minZ=dropCoords.z-10,
         maxZ=dropCoords.z+100,
-        debugPoly = true
+        debugPoly = false
     })
     DropZone:onPlayerInOut(function(isPointInside)
         if isPointInside then
