@@ -9,7 +9,7 @@ Config.TargetIcon = 'fab fa-dropbox'
 Config.TargetLabel = 'Open Crate'
 
 -- Police Config
-Config.RequiredCops = 3 -- How many cops are required to drop a gun?
+Config.RequiredCops = 1 -- How many cops are required to drop a gun?
 Config.PoliceJobs = {"police"} -- All types of police job in server.
 
 -- Other Config
@@ -46,7 +46,7 @@ Config.ItemDrops = {
 Config.Lang = { 
     ["contacted_mafia"] = "MC here. I got your request. Working on your request now.",
     ["pilot_contact"] = "You will be contacted soon",
-    ["no_cops"] = "Nope.. Not yet.",
+    ["no_cops"] = "There aren't enough cops...",
     ["pilot_dropping_soon"] = "The plane will be in ther air and the crate will be dropping soon.",
     ["pilot_crashed"] = "Fuck! The plane crashed! Delivery has failed!",
     ["crate_dropping"] = "Crate is on its way down.",
