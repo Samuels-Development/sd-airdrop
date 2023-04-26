@@ -4,6 +4,8 @@
 
 This is a fairly simple script, you use one out of three phone items and a plane will fly over your position and drop a crate with whatever loot you've set in the Config. This is originally cad-gundrop (linked below), but has been edited, for a server I'm working on, to fully sync the crate amongst all players, include a Global Cooldown (so airdrops can't be spammed) and Polyzone creation around the drop area, to notify people of the Redzone when entering. 
 
+If you want to support me and what I do, you can check me out @ https://discord.gg/samueldev / https://fivem.samueldev.shop
+
 # Dependencies:
 * qb-core (latest)
 * qb-target
