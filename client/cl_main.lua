@@ -45,7 +45,7 @@ end)
 function CrateDrop(item, amount, planeSpawnDistance, dropCoords)
     CreateThread(function()
         QBCore.Functions.Notify(Config.Lang["pilot_dropping_soon"], "success", 15000)   -- Notify the pilot that we are preparing the crate with the plane
-        SetTimeout(2000, function()            	               
+        SetTimeout(Config.TimeUntilDrop * 60 * 1000, function()            	               
             for i = 1, #Config.LoadModels do
                 RequestModel(GetHashKey(Config.LoadModels[i]))
                 while not HasModelLoaded(GetHashKey(Config.LoadModels[i])) do
@@ -133,7 +133,7 @@ function CrateDrop(item, amount, planeSpawnDistance, dropCoords)
 end
 
 RegisterNetEvent("sd-airdrop:crate:createQbTarget")
-AddEventHandler("crate:createQbTarget", function(crate, item, amount)
+AddEventHandler("sd-airdrop:crate:createQbTarget", function(crate, item, amount)
     exports[Config.TargetName]:AddTargetModel('ex_prop_adv_case_sm', {
         options = {
         {           
