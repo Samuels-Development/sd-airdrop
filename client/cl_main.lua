@@ -193,6 +193,22 @@ RegisterNetEvent("sd-airdrop:client:StartDrop", function(item, amount, roofCheck
 end)
 
 RegisterNetEvent('dropCoords:client:setPoly', function(dropCoords)
+    local radiusBlipSize = 175.0
+
+    -- Create blip at dropCoords
+    local dropBlip = AddBlipForCoord(dropCoords.x, dropCoords.y, dropCoords.z)
+    SetBlipSprite(dropBlip, 94)
+    SetBlipColour(dropBlip, 1)
+    SetBlipAsShortRange(dropBlip, true)
+    BeginTextCommandSetBlipName("STRING")
+    AddTextComponentString("Airdrop")
+    EndTextCommandSetBlipName(dropBlip)
+
+    -- Create radius blip around dropCoords
+    local radiusBlip = AddBlipForRadius(dropCoords.x, dropCoords.y, dropCoords.z, radiusBlipSize)
+    SetBlipColour(radiusBlip, 1)
+    SetBlipAlpha(radiusBlip, 80)
+
     DropZone = BoxZone:Create(vector3(dropCoords.x, dropCoords.y, dropCoords.z), 175.0, 175.0, {
         name="AtDrop",
         heading=335.31,
@@ -207,8 +223,10 @@ RegisterNetEvent('dropCoords:client:setPoly', function(dropCoords)
         end
     end)
 
-    SetTimeout(750000, function()
+    SetTimeout(600000, function()
         DropZone:destroy()
+        RemoveBlip(dropBlip)
+        RemoveBlip(radiusBlip)
     end)
 end)
 
