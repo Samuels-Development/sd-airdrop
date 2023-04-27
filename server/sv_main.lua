@@ -47,6 +47,7 @@ RegisterNetEvent('sd-airdrop:crate:deleteCrate', function(netId)
     local crate = NetworkGetEntityFromNetworkId(netId)
     if DoesEntityExist(crate) then
         DeleteEntity(crate)
+        TriggerClientEvent('sd-airdrop:crate:destroyzone', -1)
     end
 end)
 
