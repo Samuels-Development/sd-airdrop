@@ -26,6 +26,12 @@ function OpenCrate(entity, crate, item, amount)
     ClearPedTasks(ped)
 end
 
+-- Remove Crate
+RegisterNetEvent("sd-airdrop:crate:removeCrate")
+AddEventHandler("sd-airdrop:crate:removeCrate", function(entity)
+    DeleteEntity(entity)
+end)
+
 -- Apply Natives
 RegisterNetEvent("sd-airdrop:crate:applyNatives")
 AddEventHandler("sd-airdrop:crate:applyNatives", function(netId)
@@ -144,7 +150,6 @@ end)
 
 -- notify police functions
 function PoliceAlert()
-    -- Example
     -- exports['ps-dispatch']:AirDrop()
 end
 
@@ -236,7 +241,6 @@ RegisterNetEvent("sd-airdrop:client:CreateDrop", function(useditem, roofCheck, p
             QBCore.Functions.TriggerCallback("sd-airdrop:server:getCops", function(CurrentCops)
                 if CurrentCops >= Config.RequiredCops then
                     TriggerServerEvent('sd-airdrop:server:startCooldown')              
-                    QBCore.Functions.Notify(Config.Lang["contacted_mafia"], "success", 5000)
                     QBCore.Functions.Notify(Config.Lang["pilot_contact"], "success", 10000)
                     PoliceAlert()    
                     TriggerServerEvent("sd-airdrop:server:ItemHandler", "remove", useditem, 1)

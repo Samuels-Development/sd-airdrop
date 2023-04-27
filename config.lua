@@ -9,7 +9,7 @@ Config.TargetIcon = 'fab fa-dropbox'
 Config.TargetLabel = 'Open Crate'
 
 -- Police Config
-Config.RequiredCops = 1 -- How many cops are required to drop a gun?
+Config.RequiredCops = 0 -- How many cops are required to drop a gun?
 Config.PoliceJobs = {"police"} -- All types of police job in server.
 
 -- Other Config
