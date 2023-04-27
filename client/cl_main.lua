@@ -26,12 +26,6 @@ function OpenCrate(entity, crate, item, amount)
     ClearPedTasks(ped)
 end
 
--- Remove Crate
-RegisterNetEvent("sd-airdrop:crate:removeCrate")
-AddEventHandler("sd-airdrop:crate:removeCrate", function(entity)
-    DeleteEntity(entity)
-end)
-
 -- Apply Natives
 RegisterNetEvent("sd-airdrop:crate:applyNatives")
 AddEventHandler("sd-airdrop:crate:applyNatives", function(netId)
