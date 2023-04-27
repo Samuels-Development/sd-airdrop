@@ -44,7 +44,6 @@ Config.ItemDrops = {
 
 -- Locale Config
 Config.Lang = { 
-    ["contacted_mafia"] = "MC here. I got your request. Working on your request now.",
     ["pilot_contact"] = "You will be contacted soon",
     ["no_cops"] = "There aren't enough cops...",
     ["pilot_dropping_soon"] = "The plane will be in ther air and the crate will be dropping soon.",
