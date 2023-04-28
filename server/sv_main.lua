@@ -68,7 +68,7 @@ AddEventHandler("sd-airdrop:crate:spawnCrate", function(crateSpawn, item, amount
     Wait(25)
     TriggerClientEvent("sd-airdrop:crate:applyNatives", src, netId) 
     SetTimeout(3000, function()
-        TriggerClientEvent("sd-airdrop:crate:createQbTarget", -1, crate, item, amount)
+        TriggerClientEvent("sd-airdrop:crate:createQbTarget", -1, netId, crate, item, amount)
     end)
 end)
 
