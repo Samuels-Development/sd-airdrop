@@ -127,8 +127,9 @@ function CrateDrop(item, amount, planeSpawnDistance, dropCoords)
 end
 
 RegisterNetEvent("sd-airdrop:crate:createQbTarget")
-AddEventHandler("sd-airdrop:crate:createQbTarget", function(crate, item, amount)
-    exports[Config.TargetName]:AddTargetModel('ex_prop_adv_case_sm', {
+AddEventHandler("sd-airdrop:crate:createQbTarget", function(netId, crate, item, amount)
+    local CrateObject = NetworkGetNetworkIdFromEntity(netId)
+    exports[Config.TargetName]:AddTargetEntity(CrateObject, {
         options = {
         {           
             icon = Config.TargetIcon,
