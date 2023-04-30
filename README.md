@@ -6,6 +6,9 @@ This is a fairly simple script, you use one out of three phone items and a plane
 
 If you want to support me and what I do, you can check me out @ https://discord.gg/samueldev / https://fivem.samueldev.shop
 
+# Common Issue
+If you're editing the SetEntityVelocity of the Parachute and/or the crate, make sure that the numbers have decimal points (eg. instead of SetEntityVelocity(crate, 0.0, 0.0, -1) you'd put SetEntityVelocity(crate, 0.0, 0.0, -1.0))
+
 # Dependencies:
 * qb-core (latest)
 * qb-target
