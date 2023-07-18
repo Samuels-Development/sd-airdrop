@@ -12,7 +12,7 @@ RegisterNetEvent("sd-airdrop:server:ItemHandler", function(kind, item, amount)
     elseif kind == 'remove' then
         Player.Functions.RemoveItem(item, amount)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove', amount)
-    end    
+    end
 end)
 
 QBCore.Functions.CreateCallback('sd-airdrop:server:cooldown', function(source, cb)
@@ -34,8 +34,8 @@ RegisterNetEvent('sd-airdrop:server:startCooldown', function()
             if timer == 0 then
                 TriggerClientEvent('sd-airdrop:crate:clearcrate', -1)
                 print('Airdrop: Cooldown finished')
-                cooldown = false 
-            end 
+                cooldown = false
+            end
         end
     end
 end)
@@ -61,7 +61,7 @@ AddEventHandler("sd-airdrop:crate:spawnCrate", function(crateSpawn, item, amount
     local netId
     local src = source
     local crate = CreateObject(GetHashKey(Config.CrateModel), crateSpawn, true, true, true)
-    
+
     while not DoesEntityExist(crate) do Wait(25) end
     netId = NetworkGetNetworkIdFromEntity(crate)
     netIds[#netIds+1] = netId
@@ -78,7 +78,7 @@ QBCore.Functions.CreateCallback('sd-airdrop:server:getCops', function(source, cb
     for _, job in pairs(Config.PoliceJobs) do
         local amount = QBCore.Functions.GetDutyCount(job)
         count += amount
-    end	
+    end
     Wait(100)
     cb(count)
 end)
@@ -86,17 +86,17 @@ end)
 -- Golden Satalite Phone
 QBCore.Functions.CreateUseableItem("goldenphone", function(source, item)
     local src = source    
-    TriggerClientEvent("sd-airdrop:client:CreateDrop", src, tostring(item.name), true, 400)            
+    TriggerClientEvent("sd-airdrop:client:CreateDrop", src, tostring(item.name), true, 400)
 end)
 
 -- Red Satellite Phone
 QBCore.Functions.CreateUseableItem("redphone", function(source, item)
     local src = source    
-    TriggerClientEvent("sd-airdrop:client:CreateDrop", src, tostring(item.name), true, 400)            
+    TriggerClientEvent("sd-airdrop:client:CreateDrop", src, tostring(item.name), true, 400)
 end)
 
 -- Green Satellite Phone
 QBCore.Functions.CreateUseableItem("greenphone", function(source, item)
     local src = source    
-    TriggerClientEvent("sd-airdrop:client:CreateDrop", src, tostring(item.name), true, 400)            
+    TriggerClientEvent("sd-airdrop:client:CreateDrop", src, tostring(item.name), true, 400)
 end)

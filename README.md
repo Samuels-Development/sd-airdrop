@@ -13,12 +13,15 @@ If you're editing the SetEntityVelocity of the Parachute and/or the crate, make 
 * qb-core (latest)
 * qb-target
 * PolyZone
+# Optional:
+* ps-dispatch
 
 # How to Install
 - Add the images in the folder to your inventory
 - Add the below items to qb-core/shared/items.lua
 
 ```lua
+-- Airdrop
 ["goldenphone"]  = {["name"] = "goldenphone", ["label"] = "Golden Satellite Phone",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "goldenphone.png", 	["unique"] = false, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A communication device used to contact russian mafia."},
 
 ["redphone"]     = {["name"] = "redphone",    ["label"] = "Red Satellite Phone",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "redphone.png", 	["unique"] = false, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A communication device used to contact russian mafia."},

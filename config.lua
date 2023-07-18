@@ -9,8 +9,10 @@ Config.TargetIcon = 'fab fa-dropbox'
 Config.TargetLabel = 'Open Crate'
 
 -- Police Config
-Config.RequiredCops = 0 -- How many cops are required to drop a gun?
-Config.PoliceJobs = {"police"} -- All types of police job in server.
+Config.RequiredCops = 0 -- how many cops are required to drop a gun?
+Config.PoliceJobs = {"police"} -- all types of police job in server.
+Config.DispatchEnabled = false -- if false then dispatch wont work
+Config.Dispatch = "ps-dispatch" -- your dispatch name
 
 -- Other Config
 Config.TimeUntilDrop = 3 -- How long does it take to drop a gun? (in minutes)
