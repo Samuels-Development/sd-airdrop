@@ -3,7 +3,7 @@ games { 'gta5' }
 
 author 'Samuel#0008'
 description 'Item Air drop system for qbcore'
-version '1.0'
+version '1.1.0'
 
 shared_scripts {
     "config.lua",
@@ -14,7 +14,7 @@ client_scripts {
     '@PolyZone/BoxZone.lua',
     '@PolyZone/EntityZone.lua',
     '@PolyZone/CircleZone.lua',
-    '@PolyZone/ComboZone.lua',    
+    '@PolyZone/ComboZone.lua',
     "client/cl_main.lua"
 }
 
